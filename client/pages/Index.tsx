@@ -1,21 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Car, 
-  Bike, 
-  Bus, 
-  Truck, 
-  Star, 
-  MapPin, 
-  Shield, 
-  Clock, 
-  Users, 
+import {
+  Car,
+  Bike,
+  Bus,
+  Truck,
+  Star,
+  MapPin,
+  Shield,
+  Clock,
+  Users,
   Search,
   Menu,
   X
 } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const vehicleTypes = [
   { icon: Car, name: "Cars", count: "2,500+" },
@@ -78,19 +79,19 @@ export default function Index() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
                 <Car className="w-6 h-6 text-white" />
               </div>
               <span className="text-2xl font-bold text-primary">OmniRide</span>
-            </div>
+            </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-gray-700 hover:text-primary transition-colors">Browse Vehicles</a>
-              <a href="#" className="text-gray-700 hover:text-primary transition-colors">How it Works</a>
-              <a href="#" className="text-gray-700 hover:text-primary transition-colors">Become a Host</a>
-              <a href="#" className="text-gray-700 hover:text-primary transition-colors">Support</a>
+              <Link to="/browse" className="text-gray-700 hover:text-primary transition-colors">Browse Vehicles</Link>
+              <Link to="/how-it-works" className="text-gray-700 hover:text-primary transition-colors">How it Works</Link>
+              <Link to="/become-host" className="text-gray-700 hover:text-primary transition-colors">Become a Host</Link>
+              <Link to="#" className="text-gray-700 hover:text-primary transition-colors">Support</Link>
             </nav>
 
             {/* Desktop Auth Buttons */}
@@ -112,10 +113,10 @@ export default function Index() {
           {mobileMenuOpen && (
             <div className="md:hidden py-4 border-t">
               <nav className="flex flex-col space-y-4">
-                <a href="#" className="text-gray-700 hover:text-primary transition-colors">Browse Vehicles</a>
-                <a href="#" className="text-gray-700 hover:text-primary transition-colors">How it Works</a>
-                <a href="#" className="text-gray-700 hover:text-primary transition-colors">Become a Host</a>
-                <a href="#" className="text-gray-700 hover:text-primary transition-colors">Support</a>
+                <Link to="/browse" className="text-gray-700 hover:text-primary transition-colors">Browse Vehicles</Link>
+                <Link to="/how-it-works" className="text-gray-700 hover:text-primary transition-colors">How it Works</Link>
+                <Link to="/become-host" className="text-gray-700 hover:text-primary transition-colors">Become a Host</Link>
+                <Link to="#" className="text-gray-700 hover:text-primary transition-colors">Support</Link>
                 <div className="flex flex-col space-y-2 pt-4">
                   <Button variant="ghost">Sign In</Button>
                   <Button variant="success">Get Started</Button>
