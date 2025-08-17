@@ -1,5 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
   Car,
@@ -13,7 +19,7 @@ import {
   Users,
   Search,
   Menu,
-  X
+  X,
 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -29,23 +35,25 @@ const features = [
   {
     icon: Shield,
     title: "Verified Vehicles",
-    description: "All vehicles are inspected and verified for safety and reliability"
+    description:
+      "All vehicles are inspected and verified for safety and reliability",
   },
   {
     icon: Clock,
     title: "24/7 Support",
-    description: "Round-the-clock customer support for all your rental needs"
+    description: "Round-the-clock customer support for all your rental needs",
   },
   {
     icon: MapPin,
     title: "Nationwide Coverage",
-    description: "Find and rent vehicles in over 200+ cities across the country"
+    description:
+      "Find and rent vehicles in over 200+ cities across the country",
   },
   {
     icon: Users,
     title: "Trusted Community",
-    description: "Join thousands of satisfied renters and verified hosts"
-  }
+    description: "Join thousands of satisfied renters and verified hosts",
+  },
 ];
 
 const testimonials = [
@@ -53,20 +61,23 @@ const testimonials = [
     name: "Sarah Johnson",
     role: "Frequent Renter",
     rating: 5,
-    comment: "OmniRide made it so easy to find the perfect car for my weekend trip. Great selection and amazing hosts!"
+    comment:
+      "OmniRide made it so easy to find the perfect car for my weekend trip. Great selection and amazing hosts!",
   },
   {
     name: "Mike Chen",
     role: "Vehicle Host",
     rating: 5,
-    comment: "As a host, I love how OmniRide handles everything seamlessly. Great platform to earn extra income!"
+    comment:
+      "As a host, I love how OmniRide handles everything seamlessly. Great platform to earn extra income!",
   },
   {
     name: "Emma Rodriguez",
     role: "Business Traveler",
     rating: 5,
-    comment: "Professional service and reliable vehicles. I use OmniRide for all my business travel needs."
-  }
+    comment:
+      "Professional service and reliable vehicles. I use OmniRide for all my business travel needs.",
+  },
 ];
 
 export default function Index() {
@@ -88,10 +99,30 @@ export default function Index() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              <Link to="/browse" className="text-gray-700 hover:text-primary transition-colors">Browse Vehicles</Link>
-              <Link to="/how-it-works" className="text-gray-700 hover:text-primary transition-colors">How it Works</Link>
-              <Link to="/become-host" className="text-gray-700 hover:text-primary transition-colors">Become a Host</Link>
-              <Link to="#" className="text-gray-700 hover:text-primary transition-colors">Support</Link>
+              <Link
+                to="/browse"
+                className="text-gray-700 hover:text-primary transition-colors"
+              >
+                Browse Vehicles
+              </Link>
+              <Link
+                to="/how-it-works"
+                className="text-gray-700 hover:text-primary transition-colors"
+              >
+                How it Works
+              </Link>
+              <Link
+                to="/become-host"
+                className="text-gray-700 hover:text-primary transition-colors"
+              >
+                Become a Host
+              </Link>
+              <Link
+                to="#"
+                className="text-gray-700 hover:text-primary transition-colors"
+              >
+                Support
+              </Link>
             </nav>
 
             {/* Desktop Auth Buttons */}
@@ -105,7 +136,11 @@ export default function Index() {
               className="md:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
 
@@ -113,10 +148,30 @@ export default function Index() {
           {mobileMenuOpen && (
             <div className="md:hidden py-4 border-t">
               <nav className="flex flex-col space-y-4">
-                <Link to="/browse" className="text-gray-700 hover:text-primary transition-colors">Browse Vehicles</Link>
-                <Link to="/how-it-works" className="text-gray-700 hover:text-primary transition-colors">How it Works</Link>
-                <Link to="/become-host" className="text-gray-700 hover:text-primary transition-colors">Become a Host</Link>
-                <Link to="#" className="text-gray-700 hover:text-primary transition-colors">Support</Link>
+                <Link
+                  to="/browse"
+                  className="text-gray-700 hover:text-primary transition-colors"
+                >
+                  Browse Vehicles
+                </Link>
+                <Link
+                  to="/how-it-works"
+                  className="text-gray-700 hover:text-primary transition-colors"
+                >
+                  How it Works
+                </Link>
+                <Link
+                  to="/become-host"
+                  className="text-gray-700 hover:text-primary transition-colors"
+                >
+                  Become a Host
+                </Link>
+                <Link
+                  to="#"
+                  className="text-gray-700 hover:text-primary transition-colors"
+                >
+                  Support
+                </Link>
                 <div className="flex flex-col space-y-2 pt-4">
                   <Button variant="ghost">Sign In</Button>
                   <Button variant="success">Get Started</Button>
@@ -141,16 +196,26 @@ export default function Index() {
                   <span className="text-primary block">Anywhere</span>
                 </h1>
                 <p className="text-xl text-gray-600 max-w-lg">
-                  From cars to bikes, scooters to buses - find the perfect vehicle for your journey with OmniRide's trusted community of hosts.
+                  From cars to bikes, scooters to buses - find the perfect
+                  vehicle for your journey with OmniRide's trusted community of
+                  hosts.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" variant="success" className="text-lg px-8 py-6">
+                <Button
+                  size="lg"
+                  variant="success"
+                  className="text-lg px-8 py-6"
+                >
                   <Search className="w-5 h-5 mr-2" />
                   Find a Vehicle
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="text-lg px-8 py-6"
+                >
                   Become a Host
                 </Button>
               </div>
@@ -227,13 +292,17 @@ export default function Index() {
               Choose Your Perfect Ride
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Whether you need a car for a road trip, a bike for city exploration, or a bus for group travel, we've got you covered.
+              Whether you need a car for a road trip, a bike for city
+              exploration, or a bus for group travel, we've got you covered.
             </p>
           </div>
-          
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {vehicleTypes.map((vehicle, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow cursor-pointer group">
+              <Card
+                key={index}
+                className="hover:shadow-lg transition-shadow cursor-pointer group"
+              >
                 <CardContent className="p-6 text-center">
                   <vehicle.icon className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
                   <h3 className="text-xl font-semibold mb-2">{vehicle.name}</h3>
@@ -253,10 +322,11 @@ export default function Index() {
               Why Choose OmniRide?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Experience the future of vehicle rental with our innovative platform designed for modern travelers.
+              Experience the future of vehicle rental with our innovative
+              platform designed for modern travelers.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
@@ -279,20 +349,26 @@ export default function Index() {
               What Our Users Say
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Join thousands of satisfied customers who trust OmniRide for their vehicle rental needs.
+              Join thousands of satisfied customers who trust OmniRide for their
+              vehicle rental needs.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="border-0 shadow-lg">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      <Star
+                        key={i}
+                        className="w-5 h-5 fill-yellow-400 text-yellow-400"
+                      />
                     ))}
                   </div>
-                  <p className="text-gray-600 mb-4 italic">"{testimonial.comment}"</p>
+                  <p className="text-gray-600 mb-4 italic">
+                    "{testimonial.comment}"
+                  </p>
                   <div>
                     <p className="font-semibold">{testimonial.name}</p>
                     <p className="text-sm text-gray-500">{testimonial.role}</p>
@@ -311,13 +387,18 @@ export default function Index() {
             Ready to Start Your Journey?
           </h2>
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Join OmniRide today and discover a new way to travel. Whether you're renting or hosting, we make it simple and secure.
+            Join OmniRide today and discover a new way to travel. Whether you're
+            renting or hosting, we make it simple and secure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="success" className="text-lg px-8 py-6">
               Start Renting Now
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 bg-white text-primary hover:bg-gray-50">
+            <Button
+              size="lg"
+              variant="outline"
+              className="text-lg px-8 py-6 bg-white text-primary hover:bg-gray-50"
+            >
               Become a Host
             </Button>
           </div>
@@ -336,41 +417,90 @@ export default function Index() {
                 <span className="text-xl font-bold">OmniRide</span>
               </div>
               <p className="text-gray-400">
-                The future of vehicle rental. Simple, secure, and accessible to everyone.
+                The future of vehicle rental. Simple, secure, and accessible to
+                everyone.
               </p>
             </div>
-            
+
             <div>
               <h4 className="font-semibold mb-4">For Renters</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Browse Vehicles</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">How to Rent</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Safety Guidelines</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Insurance</a></li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Browse Vehicles
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    How to Rent
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Safety Guidelines
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Insurance
+                  </a>
+                </li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="font-semibold mb-4">For Hosts</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">List Your Vehicle</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Host Protection</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Pricing Guide</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Host Resources</a></li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    List Your Vehicle
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Host Protection
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Pricing Guide
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Host Resources
+                  </a>
+                </li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="font-semibold mb-4">Support</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Help Center
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Contact Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Terms of Service
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
-          
+
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; 2024 OmniRide. All rights reserved.</p>
           </div>
