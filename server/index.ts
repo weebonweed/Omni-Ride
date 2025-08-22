@@ -7,6 +7,7 @@ export function createServer() {
   const app = express();
 
   // Middleware
+  // might need some improvement 
   app.use(cors());
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
